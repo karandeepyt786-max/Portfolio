@@ -52,6 +52,16 @@ const projects = [
     live: 'https://karandeepyt786-max.github.io/Numitech-Solution-2-Responsive/',
     color: '#34d399',
     useIframe: true,
+  },
+  {
+    title: 'Full-Stack E-Commerce',
+    description: 'A comprehensive full-stack e-commerce platform featuring advanced product management, secure authentication, and seamless user experience.',
+    image: '/screenshots/e-commerce.jpg',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind'],
+    github: 'https://github.com/karandeepyt786-max',
+    live: 'https://e-commerce-ten-pi-22.vercel.app/',
+    color: '#ec4899',
+    useIframe: false,
   }
 ];
 

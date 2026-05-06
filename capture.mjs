@@ -10,7 +10,8 @@ const urls = [
   { name: 'learn-hub', url: 'https://karandeepyt786-max.github.io/Learn-Hub-Responsive/' },
   { name: 'geeks', url: 'https://karandeepyt786-max.github.io/Geeks_Responsive/' },
   { name: 'furniture', url: 'https://karandeepyt786-max.github.io/Furniture/' },
-  { name: 'numitech', url: 'https://karandeepyt786-max.github.io/Numitech-Solution-2-Responsive/' }
+  { name: 'numitech', url: 'https://karandeepyt786-max.github.io/Numitech-Solution-2-Responsive/' },
+  { name: 'e-commerce', url: 'https://e-commerce-ten-pi-22.vercel.app/' }
 ];
 
 const dir = path.join(__dirname, 'public', 'screenshots');

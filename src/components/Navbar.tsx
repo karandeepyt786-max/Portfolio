@@ -40,8 +40,8 @@ export default function Navbar() {
               <Code2 className="w-5 h-5 text-white" />
             </div>
             <span className="text-lg font-bold tracking-tight">
-              <span className="gradient-text">Dev</span>
-              <span className="text-foreground">Portfolio</span>
+              <span className="gradient-text">Karandeep</span>
+              <span className="text-foreground">Singh</span>
             </span>
           </a>
 

@@ -39,6 +39,13 @@ export default function CardStack({ items }: { items?: Card[] }) {
       alt: "Numitech Solutions preview",
       title: "Numitech Solutions",
       description: "Professional corporate website for IT solutions."
+    },
+    {
+      id: 5,
+      src: "/screenshots/e-commerce.jpg",
+      alt: "Full-Stack E-Commerce preview",
+      title: "Full-Stack E-Commerce",
+      description: "Advanced e-commerce platform with MERN stack."
     }
   ];
 
