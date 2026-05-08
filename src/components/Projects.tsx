@@ -77,7 +77,7 @@ export default function Projects() {
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="text-sm font-mono text-primary tracking-widest uppercase">Portfolio</span>
           <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4">
-            Featured <span className="gradient-text">Projects</span>
+            5+ Featured <span className="gradient-text">Projects</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-violet-glow to-cyan-glow rounded-full mx-auto" />
         </div>

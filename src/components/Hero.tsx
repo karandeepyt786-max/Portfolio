@@ -45,7 +45,7 @@ export default function Hero() {
 
         <p className="animate-slide-up opacity-0 delay-400 text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
           I build modern, scalable web applications with{' '}
-          <span className="text-foreground font-medium">MongoDB</span>,{' '}
+          <span className="text-foreground font-medium">Mongoose</span>,{' '}
           <span className="text-foreground font-medium">Express</span>,{' '}
           <span className="text-foreground font-medium">React</span> &{' '}
           <span className="text-foreground font-medium">Node.js</span>.
