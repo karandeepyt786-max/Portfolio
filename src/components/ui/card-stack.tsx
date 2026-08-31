@@ -8,6 +8,8 @@ export interface Card {
   alt: string;
   title: string;
   description: string;
+  useIframe?: boolean;
+  live?: string;
 }
 
 export default function CardStack({ items }: { items?: Card[] }) {
@@ -17,35 +19,45 @@ export default function CardStack({ items }: { items?: Card[] }) {
       src: "/screenshots/learn-hub.jpg",
       alt: "Learn Hub preview",
       title: "Learn Hub",
-      description: "Responsive educational platform landing page."
+      description: "Responsive educational platform landing page.",
+      useIframe: false,
+      live: ""
     },
     {
       id: 2,
       src: "/screenshots/geeks.jpg",
       alt: "Geeks Platform preview",
       title: "Geeks Platform",
-      description: "A responsive interface for tech enthusiasts."
+      description: "A responsive interface for tech enthusiasts.",
+      useIframe: true,
+      live: "https://karandeepyt786-max.github.io/Geeks_Responsive/"
     },
     {
       id: 3,
       src: "/screenshots/furniture.jpg",
       alt: "Furniture E-Commerce preview",
       title: "Furniture E-Commerce",
-      description: "A stylish and elegant web storefront."
+      description: "A stylish and elegant web storefront.",
+      useIframe: true,
+      live: "https://karandeepyt786-max.github.io/Furniture/"
     },
     {
       id: 4,
       src: "/screenshots/numitech.jpg",
       alt: "Numitech Solutions preview",
       title: "Numitech Solutions",
-      description: "Professional corporate website for IT solutions."
+      description: "Professional corporate website for IT solutions.",
+      useIframe: true,
+      live: "https://karandeepyt786-max.github.io/Numitech-Solution-2-Responsive/"
     },
     {
       id: 5,
       src: "/screenshots/e-commerce.jpg",
       alt: "Full-Stack E-Commerce preview",
       title: "Full-Stack E-Commerce",
-      description: "Advanced e-commerce platform with MERN stack."
+      description: "Advanced e-commerce platform with MERN stack.",
+      useIframe: false,
+      live: ""
     }
   ];
 
@@ -235,7 +247,7 @@ export default function CardStack({ items }: { items?: Card[] }) {
       <div className="relative w-[300px] sm:w-[450px] md:w-[600px] lg:w-[800px] aspect-[16/10] md:aspect-video overflow-visible z-10">
         <ul className="relative w-full h-full m-0 p-0">
           <AnimatePresence>
-            {cards.map(({ id, src, alt, title, description }, i) => {
+            {cards.map(({ id, src, alt, title, description, useIframe, live }, i) => {
               const isFront = i === 0;
               const brightness = Math.max(0.3, 1 - i * dimStep);
               const baseZ = cards.length - i;
@@ -289,12 +301,24 @@ export default function CardStack({ items }: { items?: Card[] }) {
                   onHoverStart={() => isFront && setShowInfo(true)}
                   onHoverEnd={() => setShowInfo(false)}
                 >
-                  <img
-                    src={src}
-                    alt={alt}
-                    className="w-full h-full object-cover pointer-events-none select-none"
-                    draggable={false}
-                  />
+                  {useIframe && live ? (
+                    <div className="w-full h-full overflow-hidden">
+                      <iframe
+                        src={live}
+                        title={title}
+                        className="w-full h-full border-0 pointer-events-none"
+                        tabIndex={-1}
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : (
+                    <img
+                      src={src}
+                      alt={alt}
+                      className="w-full h-full object-cover pointer-events-none select-none"
+                      draggable={false}
+                    />
+                  )}
                   
                   {/* Card Info Overlay */}
                   <motion.div

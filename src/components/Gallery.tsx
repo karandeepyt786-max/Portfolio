@@ -1,6 +1,19 @@
 import CardStack from './ui/card-stack';
+import type { Card } from './ui/card-stack';
+import { projects } from '../data/projects';
 
 export default function Gallery() {
+  // Convert projects to gallery card format
+  const galleryProjects: Card[] = projects.map((project, index) => ({
+    id: index + 1,
+    src: project.image,
+    alt: `${project.title} preview`,
+    title: project.title,
+    description: project.description,
+    useIframe: project.useIframe,
+    live: project.live,
+  }));
+
   return (
     <section id="gallery" className="relative bg-background text-foreground">
       {/* Ambient background effects */}
@@ -12,10 +25,10 @@ export default function Gallery() {
           <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-4">
             Project <span className="gradient-text">Gallery</span>
           </h2>
-          <p className="text-muted-foreground max-w-md mx-auto">Interact with the card stack to explore the projects.</p>
+          <p className="text-muted-foreground max-w-md mx-auto">Interact with the card stack to explore all {projects.length}+ projects.</p>
         </div>
         <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8">
-          <CardStack />
+          <CardStack items={galleryProjects} />
         </div>
       </div>
     </section>

@@ -14,9 +14,9 @@ function useInView(ref: React.RefObject<HTMLElement | null>, threshold = 0.15) {
 }
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'hello@developer.com', href: 'mailto:hello@developer.com' },
-  { icon: MapPin, label: 'Location', value: 'India', href: '#' },
-  { icon: Phone, label: 'Phone', value: '+91 98765 43210', href: 'tel:+919876543210' },
+  { icon: Mail, label: 'Email', value: 'karandeepyt786@gmail.com', href: 'mailto:karandeepyt786@gmail.com' },
+  { icon: MapPin, label: 'Location', value: 'Rauni, Ludhiana, Punjab', href: '#' },
+  { icon: Phone, label: 'Phone', value: '+91 9779759526', href: 'tel:+919779759526' },
 ];
 
 const socials = [
