@@ -59,5 +59,15 @@ export const projects: Project[] = [
     live: 'https://e-commerce-ten-pi-22.vercel.app/',
     color: '#ec4899',
     useIframe: false,
+  },
+  {
+    title: 'Sewing Parts',
+    description: 'A focused e-commerce experience for sewing machines and sewing parts.',
+    image: '/screenshots/sewing-machines.png',
+    tags: ['Web Development', 'E-Commerce'],
+    github: '',
+    live: 'https://sewing-machine-and-sewing-parts-gfzpqy58s.vercel.app/',
+    color: '#f97316',
+    useIframe: false,
   }
 ];
